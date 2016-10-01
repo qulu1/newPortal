@@ -381,26 +381,28 @@
 							</div>
 							<div class="height"></div>
 							<div class="mostPopular">
+							@foreach($cats->xeber()->orderBy("count","desc")->take(5)->get() as $news)
 								<div class="row">
 									<div class="col-md-4 col-xs-2">
 										<div class="mostImg">
-											<img src="images/img15.jpg">
+											<img src="{{ '/images/'.$news->news_image }}">
 										</div>
 									</div>
 									<div class="col-md-8 col-xs-8">
 										<div class="mostTitle">
 											<a href="#">
-												<h5>George Boateng: Keeping Ron Vlaar was Paul Lambert masterstroke</h5>
+												<h5>{{ $news->news_title }}</h5>
 											</a>
 											<div class="row">
-												<button>Sport</button>
+												<button> {{ $news->category_name }} </button>
 												<span>September 23, 2015</span>
 											</div>
 										</div>
 									</div>
 								</div>
 									<div class="height2"></div>
-								<div class="row">
+							@endforeach
+								{{-- <div class="row">
 									<div class="col-md-4 col-xs-2">
 										<div class="mostImg">
 											<img src="images/img16.jpg">
@@ -417,8 +419,8 @@
 											</div>
 										</div>
 									</div>
-								</div>
-									<div class="height2"></div>
+								</div> --}}
+									{{-- <div class="height2"></div>
 								<div class="row">
 									<div class="col-md-4 col-xs-2">
 										<div class="mostImg">
@@ -436,8 +438,8 @@
 											</div>
 										</div>
 									</div>
-								</div>
-									<div class="height2"></div>
+								</div> --}}
+									{{-- <div class="height2"></div>
 								<div class="row">
 									<div class="col-md-4 col-xs-2">
 										<div class="mostImg">
@@ -455,7 +457,7 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> --}}
 							</div>
 
 							<div class="row">

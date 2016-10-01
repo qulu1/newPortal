@@ -25,19 +25,43 @@ use App\Category;
 class NewsController extends Controller
 {
     public function home(){
-      $cat=Category::all();
+        $cat=Category::all();
 
-    	return view("news.home",compact('cat'));
+        // $xeber = Xeber::find($id);
+
+        // $xeber_count = $xeber->count += 1;
+
+        // $xeber->update([
+
+        //     "count"=>$xeber_count
+
+        // ]);
+
+    	return view("news.home",compact('cat','xeber_order'));
 
     }
-    public function single(){
+    public function single($id){
 
-    	return view("news.single");
+        $xeber = Xeber::find($id);
+
+        $xeber_count = $xeber->count += 1;
+
+        $xeber->update([
+
+            "count"=>$xeber_count
+
+        ]);
+
+    	return view("news.single",compact('xeber', 'xeber_count'));
 
     }
-    public function category(){
 
-    	return view("news.category");
+
+    public function category($id){
+
+        $cat = Category::find($id);
+
+    	return view("news.category", compact("cat"));
 
     }
 

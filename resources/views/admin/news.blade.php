@@ -30,7 +30,7 @@
 					    		<td>{{ $xeberler->id}}</td>
 					    		<td>{{ $xeberler->news_title}}</td>
 					    		<td> {!! $xeberler->news_text !!}</td>
-					    		<td>{{ $xeberler->category[0]}}</td>
+					    		<td>{{ $xeberler->category->category_name}}</td>
 								<td>{{ $xeberler->user->name }}</td>
 					    		<td>{{ $xeberler->created_at }}</td>
 					    		<td>

@@ -2,10 +2,10 @@
 <html>
 <head>
     <title>NewsPortal</title>
-    <link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="{{url('assets/vendors/bootstrap/css/bootstrap.css')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{url('assets/css/index.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url('assets/css/style.css')}}">
 </head>
 <body>
     

@@ -19,7 +19,7 @@ Route::get('single/{id}', "NewsController@single");
 
 Route::get('/home', "NewsController@home");
 
-Route::get('category', "NewsController@category");
+Route::get('category{id}', "NewsController@category");
 
 Route::get('index', "NewsController@index");
 

@@ -20,16 +20,18 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
+                @foreach($cat->xeber()->orderBy("id","desc")->take(2)->get() as $news)
                     <div class="WorldSimg" style="width:570px;">
                         <a href="#">
                             <img src="images/img43.jpg">
                             <div class="WorlSdesc">
                                 <button>WORLD</button>
-                                <h5>Georgian solider helped in attack near US base in Afganistan </h5>
+                                <h5> {{ $news->news_title }} </h5>
                                 <p><span>David Lee</span> - September 23, 2015</p>
                             </div>
                         </a>
                     </div>
+                @endforeach    
                 </div>
                 <div class="col-md-6">
                     <div class="WorldSimg">

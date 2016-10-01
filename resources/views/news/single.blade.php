@@ -8,7 +8,7 @@
 				<div class="row">
 					<a href="#" class="category">PHOTOGRAPHY</a>
 					<h1>
-						Celebrity make-up artist Gary Cockerill shows you beauty trick
+						{{ $xeber->news_title }}
 					</h1>
 					<p>By David Lee - September 24, 2015</p>
 					<div >
@@ -18,19 +18,18 @@
 						<a href="#">Pinterest</a>
 					</div>				
 				</div>
+				<h4>{{$xeber_count}}</h4>
 				<div class="row">
-					<img src="images/img1.jpg" class="sekil">
+					<img src="{{ '/images/'.$xeber->news_image }}" class="sekil">
 						<p class="sekil_p">
-							All right. Well, take care yourself. I guess that’s what you’re best, presence old master? A tremor in the Force. The last time felt it was in the presence of my old master. I have traced the Rebel spies to her.
-						</p>	
-						<p class="sekil_p">Remember, a Jedi can feel the Force flowing through him. I can’t get involved! I’ve got work to do! It’s not that I like the Empire, I hate it, but there’s nothing I can do about it right now.
+							{!! $xeber->news_text !!}
 						</p>
 						<blockquote>
 							Design is not just what it looks like and feels like. Design is how it works.
 						</blockquote>
 							<br>
 							<br>
-						<p class="sekil_p">
+						{{-- <p class="sekil_p">
 							The plans you refer to will soon be back in our hands. The plans you refer to will soon be back in our hands. Leave that to me. Send a distress signal, and inform the Senate that all on board were killed. Red Five standing by.
 						</p>
 					<img src="images/img2.jpg" class="sekil">
@@ -88,7 +87,7 @@
 							You are a part of the Rebel Alliance and a traitor! Take her away! Red Five standing by. All right. Well, take care of yourself, Han. I guess that’s what you’re best at, ain’t it? Alderaan? I’m not going to Alderaan. I’ve got to go home. It’s late, I’m in for it as it is.
 
 							Oh God, my uncle. How am I ever gonna explain this? Hey, Luke! May the Force be with you. I find your lack of faith disturbing.
-						</p>	
+						</p> --}}	
 				</div>
 				<div class="row" style="margin-bottom:50px;">
 					<div class="share">
